@@ -1,0 +1,32 @@
+<form [formGroup]="formEstudiante" (ngSubmit)="submit()" class="m-3 col-lg-6">
+    <div class="form-1">
+        <div>
+        <label>Nombre</label>
+        <input type="text" id="nombre" formControlName="nombre">
+        <span *ngIf="this.formEstudiante.get('nombre')?.errors?.['required']">(el nombre no puede estar vacio)</span>
+       </div>
+       <div>
+        <label>Apellido</label>
+        <input type="text" id="apellido" formControlName="apellido">
+        <span *ngIf="this.formEstudiante.get('apellido')?.errors?.['required']">(el apelido no puede estar vacio)</span>
+       </div>
+       <div>
+        <label>Edad</label>
+        <input type="text" id="edad" formControlName="edad">
+        <span *ngIf="this.formEstudiante.get('edad')?.errors?.['required']">(la edad no puede estar vacio)</span>
+        </div>
+    </div>
+    <div class="form-2">
+        <div>
+        <label>Fecha</label>
+        <input type="date" id="date" formControlName="fecha">
+        <span *ngIf="this.formEstudiante.get('date')?.errors?.['required']">(la fecha no puede estar vacia)</span>
+        </div>
+        <div>
+        <label>Email</label>
+        <input type="Email" id="email" formControlName="email">
+        <span *ngIf="this.formEstudiante.get('email')?.errors?.['required']">(el Email no puede estar vacio)</span>
+        </div>
+    </div>
+    <button type="submit">Submit</button>
+</form>

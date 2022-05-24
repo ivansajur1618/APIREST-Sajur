@@ -1,0 +1,10 @@
+/* form {
+    display: flex;
+} */
+/* div {
+    
+} */
+.form-1 div {
+    display: flex;
+    margin-bottom: 3rem;
+}
